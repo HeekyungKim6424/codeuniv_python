@@ -18,7 +18,7 @@ for i in d1:
         sum=sum+int(i[j])
     
     if sum>max:
-        max=i
+        max=int(i)
     else:
         continue
 
