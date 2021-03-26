@@ -32,10 +32,27 @@ else:
 
 d=int(input("입력받을 숫자의 갯수를 입력해주세요: "))
 f=[]
+k=[]
+m=[]
+o=[]
 
 for i in range(1,d+1):
     e=int(input("각 {}번째 숫자를 입력해주세요: ".format(i)))
     f.append(e)
-    
 
-    
+for i in f:
+    g=len(str(i))
+    for j in range(0,g):
+        h=i//(10**j)
+        k.append(h)
+    for j in k:
+        l=j*(10**(g-1))
+        g=g-1
+        m.append(l)
+    n=sum(m)
+    for j in range(2,n+1):
+        p=n%j
+        o.append(p)
+    if o.count(0)==1:
+        print(i)
+
